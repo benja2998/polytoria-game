@@ -14,6 +14,7 @@ public partial class ViewPlaceInfo : MobileViewBase
 	[Export] private Label _genreLabel = null!;
 	[Export] private Label _placeNameLabel = null!;
 	[Export] private Label _creatorNameLabel = null!;
+	[Export] private Label _descriptionLabel = null!;
 	[Export] private TextureRect _thumbnailRect = null!;
 	[Export] private Control _thumbnailGradient = null!;
 
@@ -37,6 +38,7 @@ public partial class ViewPlaceInfo : MobileViewBase
 		_genreLabel.Text = "";
 		_placeNameLabel.Text = "";
 		_creatorNameLabel.Text = "";
+		_descriptionLabel.Text = "";
 
 		MobileUI.Singleton.LoadingScreen.ShowScreen();
 
@@ -44,6 +46,7 @@ public partial class ViewPlaceInfo : MobileViewBase
 		_genreLabel.Text = _placeInfo.Genre;
 		_placeNameLabel.Text = _placeInfo.Name;
 		_creatorNameLabel.Text = "By " + _placeInfo.Creator.Name;
+		_descriptionLabel.Text = _placeInfo.Description;
 
 		MobileUI.Singleton.LoadingScreen.HideScreen();
 	}
